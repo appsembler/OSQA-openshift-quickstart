@@ -15,7 +15,7 @@ Create a python application
 Add this upstream seambooking repo
 
     cd osqa
-    git remote add upstream -m master git://github.com/lulinqing/OSQA-mysql.git
+    git remote add upstream -m master git://github.com/openshift/OSQA-openshift-quickstart.git
     git pull -s recursive -X theirs upstream master
 
 Add mysql database support for you app
@@ -59,7 +59,3 @@ You can push the repo now
 That's it, you can now checkout your application at:
 
     http://osqa-$yournamespace.rhcloud.com
-
-Here goes mine:
-
-    http://osqa-linqing.rhcloud.com/
