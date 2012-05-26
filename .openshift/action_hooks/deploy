@@ -5,5 +5,5 @@
 # ruby, etc.
 source $OPENSHIFT_GEAR_DIR/virtenv/bin/activate
 cd $OPENSHIFT_REPO_DIR/wsgi/osqa
-python manager.py syncdb --all --no
+python manage.py syncdb --all --no
 python manage.py migrate forum --fake
