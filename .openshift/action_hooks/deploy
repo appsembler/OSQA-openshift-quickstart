@@ -3,6 +3,7 @@
 # build hook has been run but before the application has been started back
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
+source $OPENSHIFT_GEAR_DIR/virtenv/bin/activate
 cd $OPENSHIFT_REPO_DIR/wsgi/osqa
-$OPENSHIFT_GEAR_DIR/virtenv/python manager.py syncdb --all --no
-$OPENSHIFT_GEAR_DIR/virtenv/python manage.py migrate forum --fake
+python manager.py syncdb --all --no
+python manage.py migrate forum --fake
