@@ -27,7 +27,7 @@ INTERNAL_IPS = ('127.0.0.1',)
 DATABASE_NAME = os.environ['OPENSHIFT_APP_NAME']
 DATABASE_USER = os.environ['OPENSHIFT_DB_USERNAME']
 DATABASE_PASSWORD = os.environ['OPENSHIFT_DB_PASSWORD']
-DATABASE_ENGINE = os.environ['OPENSHIFT_DB_TYPE']
+DATABASE_ENGINE = 'django.db.backends.'+os.environ['OPENSHIFT_DB_TYPE']
 DATABASE_HOST =  os.environ['OPENSHIFT_DB_HOST']
 DATABASE_PORT = os.environ['OPENSHIFT_DB_PORT']
 
@@ -38,7 +38,7 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 # This should be equal to your domain name, plus the web application context.
 # This shouldn't be followed by a trailing slash.
 # I.e., http://www.yoursite.com or http://www.hostedsite.com/yourhostapp
-APP_URL = "http://"+os.environ['OPENSHIFT_APP_DNS']
+APP_URL = 'http://'+os.environ['OPENSHIFT_APP_DNS']
 
 #LOCALIZATIONS
 TIME_ZONE = 'America/New_York'
