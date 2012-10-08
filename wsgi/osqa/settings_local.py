@@ -25,11 +25,11 @@ INTERNAL_IPS = ('127.0.0.1',)
 
 
 DATABASE_NAME = os.environ['OPENSHIFT_APP_NAME']
-DATABASE_USER = os.environ['OPENSHIFT_DB_USERNAME']
-DATABASE_PASSWORD = os.environ['OPENSHIFT_DB_PASSWORD']
-DATABASE_ENGINE = 'django.db.backends.'+os.environ['OPENSHIFT_DB_TYPE']
-DATABASE_HOST =  os.environ['OPENSHIFT_DB_HOST']
-DATABASE_PORT = os.environ['OPENSHIFT_DB_PORT']
+DATABASE_USER = os.environ['OPENSHIFT_MYSQL_DB_USERNAME']
+DATABASE_PASSWORD = os.environ['OPENSHIFT_MYSQL_DB_PASSWORD']
+DATABASE_ENGINE = 'django.db.backends.'+os.environ['OPENSHIFT_MYSQL_DB_TYPE']
+DATABASE_HOST =  os.environ['OPENSHIFT_MYSQL_DB_HOST']
+DATABASE_PORT = os.environ['OPENSHIFT_MYSQL_DB_PORT']
 
 CACHE_BACKEND = 'file://%s' % os.path.join(os.path.dirname(__file__),'cache').replace('\\','/')
 #CACHE_BACKEND = 'dummy://'
