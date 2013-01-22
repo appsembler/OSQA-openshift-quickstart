@@ -14,7 +14,7 @@ Create a python application
 
 Add mysql database support for you app
 
-    rhc app cartridge add -a osqa -c mysql-5.1
+    rhc cartridge add -a osqa -c mysql-5.1
 
 Grab this quickstart codes and make it working for you!
 
